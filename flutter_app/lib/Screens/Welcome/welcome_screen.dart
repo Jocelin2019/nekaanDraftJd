@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_app/Screens/Welcome/components/body.dart';
+
+class WelcomeScreen extends StatelessWidget {
+ @override
+ Widget build(BuildContext) {
+   return Scaffold(
+     body: Body(),
+   );
+ }
+}
+
+
+
