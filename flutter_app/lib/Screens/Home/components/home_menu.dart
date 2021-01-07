@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/Screens/Home/components/card_screen.dart';
+import 'file:///C:/Users/jdupenor/AndroidStudioProjects/flutter_app/lib/Screens/Home/components/Cards/card_screen.dart';
 import 'package:flutter_app/Screens/Home/components/home_screen.dart';
+import 'package:flutter_app/Screens/Home/components/send_screen.dart';
 import 'package:flutter_app/constants.dart';
 
 class HomeMenu extends StatefulWidget {

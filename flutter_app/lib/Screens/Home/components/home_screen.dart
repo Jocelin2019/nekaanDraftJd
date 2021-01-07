@@ -1,5 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/Screens/Home/components/Cards/card_add_new.dart';
+import 'file:///C:/Users/jdupenor/AndroidStudioProjects/flutter_app/lib/Screens/Home/components/Cards/card_screen.dart';
+import 'package:flutter_app/Screens/Home/components/send_screen.dart';
+import 'package:flutter_app/components/already_have_an_account_acheck.dart';
+
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -15,6 +20,7 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children:<Widget> [
+       //ENTETE : Available Balance+Notification+UserPict
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget> [
@@ -44,12 +50,15 @@ class HomeScreen extends StatelessWidget {
                 Text("Available Balance", style: TextStyle(fontWeight: FontWeight.w700, fontSize: 16, color: Colors.red[100]),),
                 
                 SizedBox(height: 24,),
-                
+      //BUTTONS MENU LINE
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget> [
+             //SEND BUTTON
                     Container(
+
                       child: Column(
+
                         children:  <Widget> [
                           Container(
                             decoration: BoxDecoration(
@@ -57,9 +66,20 @@ class HomeScreen extends StatelessWidget {
                              // color : Color.fromRGBO(243,245, 248, 1),
                               borderRadius: BorderRadius.all(Radius.circular(18))
                             ),
-                            child: Icon(Icons.date_range, color: Colors.blue[900], size: 30,),
-                            padding: EdgeInsets.all(12),
+                           child: IconButton(
+                             icon: Icon(Icons.date_range, color: Colors.blue[900], size: 30,),
+                             //padding: EdgeInsets.all(14),
+                             onPressed: () {
+                               Navigator.push(context, MaterialPageRoute(builder: (context){
+                                 return SendScreen();
+                               },
+                               ),
+                               );
+                             },
+                           ),
+                            padding: EdgeInsets.all(4),
                           ),
+
                           SizedBox(
                             height: 4,
                           ),
@@ -67,7 +87,7 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-
+             //REQUEST BUTTON
                     Container(
                       child: Column(
                         children:  <Widget> [
@@ -88,7 +108,7 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-
+             //LOAN BUTTON
                     Container(
                       child: Column(
                         children:  <Widget> [
@@ -108,7 +128,7 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-
+             //TopUP BUTTON
                     Container(
                       child: Column(
                         children:  <Widget> [
